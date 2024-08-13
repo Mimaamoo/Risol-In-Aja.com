@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Person - Risol-In Aja</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <a class="navbar-brand" href="index.html">Risol-In Aja</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="katalog.html">Katalog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Person</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1><strong>Detail :</strong></h1>
+
+        <div class="contact-details">
+            <h2>Alamat</h2>
+            <p>Gg. Jaya, kwala bekala, medan johor, Medan, Sumatera Utara, Indonesia, 20142</p>
+
+            <h2>Contact Person</h2>
+            <p>Phone: 0857 6248 3230</p>
+            <p>Email: risoolinaja@gmail.com</p>
+            <p>Instagram: @risoolinaja</p>
+
+            <a href="https://api.whatsapp.com/send?phone=6285762483230" target="_blank" class="btn btn-success mb-3">Hubungi kami via WhatsApp</a>
+        </div>
+
+        <h2><strong>Contact Form :</strong></h2>
+<p>Kontak email kami untuk Kolaborasi / Sponsor / Pembelian partai besar</p>
+<form id="contact-form">
+    <div class="form-group">
+        <label for="name">Nama kamu / nstansi kamu :</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="message">Pesan</label>
+        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+
+    </div>
+    <!-- Modal Pop-up -->
+    <div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="responseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="responseModalLabel">Notification</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body-content">
+                    <!-- Message content will be inserted here by JS -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("FlMW58dKP3PyMD-E8"); // Insert public key here
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm('risoolinaja', 'risoolintemplate', this)
+                .then(function() {
+                    document.getElementById('modal-body-content').innerText = 'Message sent successfully!';
+                    $('#responseModal').modal('show');
+                    document.getElementById('contact-form').reset();
+                }, function(error) {
+                    document.getElementById('modal-body-content').innerText = 'Message sending failed. Please try again.';
+                    $('#responseModal').modal('show');
+                    console.log('Failed...', error);
+                });
+        });
+    </script>
+</body>
+</html>
