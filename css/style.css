@@ -8,17 +8,17 @@ body {
 /* Navbar Styles */
 .navbar {
     background-color: #6c757d !important;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
 }
 
 .navbar-brand {
     color: #ffffff !important;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
 }
 
 .navbar-nav .nav-link {
     color: #ffffff !important;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
 }
 
 .navbar-nav .nav-link:hover {
@@ -28,7 +28,7 @@ body {
 .logo {
     height: 60px;
     margin-right: 20px;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .logo:hover {
@@ -42,7 +42,7 @@ body {
 
 .menu-populer {
     margin-top: 30px;
-    animation: fadeIn 1s ease;
+    animation: fadeIn 3s ease;
 }
 
 @keyframes fadeIn {
@@ -72,7 +72,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
 .profile:hover {
@@ -97,7 +97,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
 .catalog-item:hover {
@@ -121,7 +121,7 @@ body {
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.5s ease;
 }
 
 .contact-details:hover {
@@ -131,7 +131,7 @@ body {
 .form-control,
 .btn {
     border-radius: 5px;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.5s ease, border-color 0.3s ease;
 }
 
 .btn-success {
