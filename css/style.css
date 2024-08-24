@@ -59,6 +59,8 @@ body {
     display: flex;
     overflow-x: auto;
     padding: 10px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .profile {
