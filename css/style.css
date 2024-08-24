@@ -8,14 +8,17 @@ body {
 /* Navbar Styles */
 .navbar {
     background-color: #6c757d !important;
+    transition: background-color 0.3s ease;
 }
 
 .navbar-brand {
     color: #ffffff !important;
+    transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link {
     color: #ffffff !important;
+    transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
@@ -25,7 +28,12 @@ body {
 .logo {
     height: 60px;
     margin-right: 20px;
-  }
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
 
 /* Container Styles */
 .container {
@@ -34,6 +42,16 @@ body {
 
 .menu-populer {
     margin-top: 30px;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* About Us Page Styles */
@@ -52,6 +70,12 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .profile img {
@@ -71,6 +95,12 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.catalog-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .catalog-item img {
@@ -89,11 +119,17 @@ body {
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-details:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .form-control,
 .btn {
     border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-success {
@@ -119,13 +155,27 @@ body {
 .greeting {
     padding: 40px;
     text-align: center;
-  }
-  .greeting h2 {
+    animation: fadeInUp 1s ease;
+}
+
+.greeting h2 {
     font-size: 32px;
     margin-bottom: 20px;
-  }
-  .greeting p {
+}
+
+.greeting p {
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 30px;
-  }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
