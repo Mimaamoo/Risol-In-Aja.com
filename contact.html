@@ -30,36 +30,38 @@
         </div>
     </nav>
 
+    <!-- Main Contact Section -->
     <div class="container mt-5">
-        <h1><strong>Detail :</strong></h1>
+        <h1 class="text-center"><strong>Contact Us</strong></h1>
 
-        <div class="contact-details">
+        <div class="contact-details animated fadeInUp">
             <h2>Alamat</h2>
-            <p>Gg. Jaya, kwala bekala, medan johor, Medan, Sumatera Utara, Indonesia, 20142</p>
+            <p>Gg. Jaya, Kwala Bekala, Medan Johor, Medan, Sumatera Utara, Indonesia, 20142</p>
 
             <h2>Contact Person</h2>
             <p>Phone: 0857 6248 3230</p>
             <p>Email: risoolinaja@gmail.com</p>
             <p>Instagram: @risoolinaja</p>
 
-            <a href="https://api.whatsapp.com/send?phone=6285762483230" target="_blank" class="btn btn-success mb-3">Hubungi kami via WhatsApp</a>
+            <a href="https://api.whatsapp.com/send?phone=6285762483230" target="_blank" class="btn btn-success animated bounceIn">Hubungi kami via WhatsApp</a>
         </div>
 
-        <h2><strong>Contact Form :</strong></h2>
-<p>Kontak email kami untuk Kolaborasi / Sponsor / Pembelian partai besar</p>
-<form id="contact-form">
-    <div class="form-group">
-        <label for="from_name">Nama kamu / <img src="" alt="" srcset=""> instansi kamu :</label>
-        <input type="text" class="form-control" id="from_name" name="from_name" required>
+        <!-- Contact Form -->
+        <h2 class="text-center mt-5"><strong>Contact Form</strong></h2>
+        <p class="text-center">Kolaborasi, sponsor, atau pembelian partai besar? Kirim pesan kepada kami!</p>
+        <form id="contact-form" class="animated fadeInUp">
+            <div class="form-group">
+                <label for="from_name">Nama kamu atau instansi kamu:</label>
+                <input type="text" class="form-control" id="from_name" name="from_name" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
     </div>
-    <div class="form-group">
-        <label for="message">Pesan</label>
-        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Send</button>
-</form>
 
-    </div>
     <!-- Modal Pop-up -->
     <div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="responseModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -86,9 +88,10 @@
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
     <script>
         (function() {
-    emailjs.init("FlMW58dKP3PyMD-E8"); // Insert public key here
-    console.log("EmailJS Initialized");
-})();
+            emailjs.init("FlMW58dKP3PyMD-E8"); // Insert public key here
+            console.log("EmailJS Initialized");
+        })();
+
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
