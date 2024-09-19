@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,18 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <img src="img/logo.png" alt="Logo" class="logo">
         <a class="navbar-brand" href="index.html">Risol-In Aja</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About Us</a>
                 </li>
@@ -30,38 +33,49 @@
         </div>
     </nav>
 
+    <!-- Content -->
     <div class="container mt-5">
         <div class="greeting">
             <h2><strong>WELCOME TO OUR PAGE</strong></h2>
-            <p>Kami adalah tim penikmat makanan yang penuh semangat, berdedikasi untuk membawa pengalaman risol yang paling lezat dan otentik kepada Anda. Bergabunglah dengan kami dalam perjalanan penuh cita rasa ini, ketika kami menjelajahi dunia risol, satu gigitan demi satu.</p>
-            <p>Bersiaplah untuk menggoda lidah Anda dan menemukan keajaiban dari kreasi risol buatan kami. Baik Anda pecinta risol sejati atau pendatang baru dalam kenikmatan ini, kami memiliki sesuatu yang istimewa khusus untuk Anda.</p>
-          </div>
-        </div>
-
-<h2 class="text-center"><strong>Profil Founder</strong></h2>
-        <div class="founder-profiles">
-            <div class="profile">
-                <img src="img/sukma.jpg" alt="Founder 1">
-                <p>Restu Ning Sukma</p>
-            </div>
-            <div class="profile">
-                <img src="img/mimaa.jpg" alt="Founder 2">
-                <p>Rut Yemima Brahmana</p>
-            </div>
-            <div class="profile">
-                <img src="img/nelora.jpg" alt="Founder 3">
-                <p>Nelora Priska</p>
-            </div>
-            <div class="profile">
-                <img src="img/aldi.jpeg" alt="Founder 4">
-                <p>Aldi Marcelino</p>
-            </div>
+            <p>Kami adalah tim penikmat makanan yang penuh semangat, berdedikasi untuk membawa pengalaman risol yang paling
+                lezat dan otentik kepada Anda. Bergabunglah dengan kami dalam perjalanan penuh cita rasa ini, ketika kami
+                menjelajahi dunia risol, satu gigitan demi satu.</p>
+            <p>Bersiaplah untuk menggoda lidah Anda dan menemukan keajaiban dari kreasi risol buatan kami. Baik Anda pecinta
+                risol sejati atau pendatang baru dalam kenikmatan ini, kami memiliki sesuatu yang istimewa khusus untuk Anda.</p>
         </div>
     </div>
 
+    <!-- Founder Profiles -->
+    <h2 class="text-center"><strong>Profil Founder</strong></h2>
+    <div class="founder-profiles">
+        <div class="profile">
+            <img src="img/sukma.jpg" alt="Founder 1">
+            <p>Restu Ning Sukma</p>
+        </div>
+        <div class="profile">
+            <img src="img/mimaa.jpg" alt="Founder 2">
+            <p>Rut Yemima Brahmana</p>
+        </div>
+        <div class="profile">
+            <img src="img/nelora.jpg" alt="Founder 3">
+            <p>Nelora Priska</p>
+        </div>
+        <div class="profile">
+            <img src="img/aldi.jpeg" alt="Founder 4">
+            <p>Aldi Marcelino</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        // Reveal animations for profiles and greeting text
+        ScrollReveal().reveal('.greeting', { delay: 500, distance: '50px', origin: 'bottom', duration: 1000 });
+        ScrollReveal().reveal('.profile', { interval: 200, distance: '50px', origin: 'bottom', duration: 1000 });
+    </script>
 </body>
+
 </html>
